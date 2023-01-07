@@ -4,7 +4,7 @@
 include "numbers.php";
 include "random_number.php";
 
-$rand_num_str = getRandomNumber();
+$rand_num_str = generateRandomNumber();
 $guess_str = "";
 
 if(isset($_POST["rand-num"])){
@@ -23,6 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["input"])) {
     }
 }
 ?>
+
 <h1>Guess the number</h1>
 <form method="post">
     <input type="text" name="input" value="<?= $guess_str ?>"/>

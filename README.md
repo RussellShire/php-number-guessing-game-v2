@@ -18,8 +18,7 @@ https://russellshire.github.io/php-number-guessing-game/ -->
 
 # Optional To-Do:
 
-~~- Currently running in terminal, rewrite for browser~~
-
+- Add success screen
 - Add CSS styling
 - Ensure layout is mobile optimised
 - Add a 'celebration' animation for correct guesses to make it more of an event
