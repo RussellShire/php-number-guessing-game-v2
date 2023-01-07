@@ -11,7 +11,7 @@ foreach ($rand_num_char as $key => $char) : ?>
         padding:15px 10px;
         margin:5px">
         <?php
-        if($guess_str && $guess_char[$key] === $char && count($guess_char) >= $key ) { // 
+        if($guess_str && count($guess_char)-1 >= $key && $guess_char[$key] === $char ) { // 
             echo $char;
         } else {
             echo "*";
