@@ -3,8 +3,6 @@
 
 $rand_num_char = str_split(strtoupper($num));
 
-echo count($guess_char);
-
 foreach ($rand_num_char as $key => $char) : ?>
     <div style="
         border:solid;
