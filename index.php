@@ -19,13 +19,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["input"])) {
     $guess_str = trim(htmlspecialchars($_POST["input"]));
     $guess_char = str_split(strtoupper($guess_str));
 
-    // $pressed = 0;
-
-
-
     if($guess_str === $num){
         $message = "CORRECT! It was {$num}. Here's another one between {$numbers[0]} and {$numbers[count($numbers)-1]}...";
-        $num = generateRandomNumber();
+        $num = $rand_num_str;
         $guess_str = "";
     } else {
         $message = "Guess again...";
@@ -35,12 +31,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["input"])) {
 
 <h1>Guess the number</h1>
 <p><?= $message ?></p>
-<!-- <p>I'm thinking of a number between <?= $numbers[0] ?> and <?= $numbers[count($numbers)-1] ?>, can you guess it?</p> -->
 
 <?php
 include "hint-boxes.php";
 
-// echo "Correct answer: " . $num . "<br>";
+// echo "Correct answer for testing: " . $num . "<br>";
 ?>
 
 <form method="post">
